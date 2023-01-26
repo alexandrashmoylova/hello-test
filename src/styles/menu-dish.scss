@@ -1,0 +1,18 @@
+.menu-dish {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+
+    &--first {
+      margin-right: 12px;
+    }
+
+    &--second {
+      margin-left: 12px;
+    }
+  }
+}

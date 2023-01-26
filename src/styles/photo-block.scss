@@ -1,0 +1,26 @@
+.photo-block {
+  display: flex;
+  gap: 10px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background-color: transparent;
+    border: 2px solid #d3b47f;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__img{
+    z-index: 5;
+
+    &:first-child {
+      margin-top: 100px;
+    }
+  }
+}

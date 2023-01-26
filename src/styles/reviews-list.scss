@@ -1,0 +1,40 @@
+.reviews-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    color: #d3b47f;
+  }
+  
+  &__text {
+    margin: 0 0 30px;
+    font-size: 14px;
+    line-height: calc(22 / 14);
+    text-align: center;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #d3b47f;
+  }
+}
