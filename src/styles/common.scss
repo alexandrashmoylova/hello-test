@@ -13,7 +13,7 @@ html {
 html,
 body {
   min-width: 320px;
-  background-color: #e5e5e5;
+  background-color: #fff;
   color: #000;
   font-family: Poppins;
   font-size: 18px;
@@ -21,4 +21,16 @@ body {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
