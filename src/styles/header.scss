@@ -7,3 +7,27 @@
     align-items: center;
   }
 }
+
+.header--open {
+  transition: background-color 0.5s ease-in;
+  z-index: 20;
+}
+
+.header--open .burger > span {
+  height: 0;
+}
+
+.header--open .burger > span::before {
+  transform: rotate(45deg);
+}
+
+.header--open .burger > span::after {
+  transform: rotate(-45deg);
+}
+
+.header--open .nav--animate {
+  position: absolute;
+  z-index: 20;
+  transition: transform 0.5s ease;
+  transform: translateX(0%);
+}

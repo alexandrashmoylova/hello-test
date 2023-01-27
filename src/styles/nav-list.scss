@@ -1,0 +1,20 @@
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: 20px;
+    border-bottom: 2px solid #a1a1a1;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: calc(20 / 18);
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+  }
+}
