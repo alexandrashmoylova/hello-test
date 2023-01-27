@@ -12,9 +12,17 @@
   &__item {
     border-bottom: 2px solid #acacac;
 
+    &:last-child {
+      margin: 0;
+    }
+
     @media (min-width: 768px) {
       margin-right: 14px;
       border-bottom: none;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: 45px;
     }
   }
 

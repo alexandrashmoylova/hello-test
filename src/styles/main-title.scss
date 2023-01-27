@@ -3,4 +3,14 @@
   font-size: 40px;
   line-height: 1;
   font-weight: 700;
+
+  @media (min-width: 1028px) {
+    font-size: 64px;
+    color: #fff;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 64px;
+    line-height: calc(88 / 64);
+  }
 }

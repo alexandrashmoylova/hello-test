@@ -3,6 +3,10 @@
   gap: 10px;
   position: relative;
 
+  @media (min-width: 800px) {
+    width: calc(100% / 2);
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -14,13 +18,24 @@
     border: 2px solid #d3b47f;
     transform: translate(-50%, -50%);
     z-index: 1;
+
+    @media (min-width: 800px)  and (max-width: 1028px){
+      top: 32%;
+      height: 56%;
+    }
   }
 
   &__img{
     z-index: 5;
 
     &:first-child {
-      margin-top: 100px;
+      margin-top: 150px;
+    }
+
+    &:last-child {
+      @media (min-width: 800px) {
+        margin-top: 15px;
+      }
     }
   }
 }

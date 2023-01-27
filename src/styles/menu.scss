@@ -1,4 +1,14 @@
 .menu {
   min-width: 320px;
   padding: 20px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
 }

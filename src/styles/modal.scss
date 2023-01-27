@@ -1,0 +1,77 @@
+.modal {
+  min-width: 320px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: auto;
+  background: #00000080;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all scale(0);
+  backdrop-filter: blur(15px);
+  z-index: 20;
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 40px 60px;
+    background: #fff;
+    transition: .5s all;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      font-size: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        display: block;
+        width: 26px;
+        height: 2px;
+        border-radius: 2px;
+        background: #000;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.modal--active {
+  opacity: 1;
+  pointer-events: all;
+  transition: .5s all;
+}
+
+.modal__inner--active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: .5s all;
+}

@@ -26,5 +26,10 @@
       border: 1px solid #d3b47f;
       color: #d3b47f;
     }
+
+    @media (min-width: 1028px) {
+      color: #fff;
+      border: 1px solid #fff;
+    }
   }
 }
