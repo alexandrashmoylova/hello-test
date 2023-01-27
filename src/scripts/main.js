@@ -45,6 +45,9 @@ function closePopupByClick(evt) {
 function closePopup() {
   modal.classList.remove('modal--active');
   popup.classList.remove('modal__inner--active');
+  inputs.forEach(input => {
+    input.classList.remove('input-error');
+  });
   document.removeEventListener('keydown', onPopupEscKeydown);
   document.removeEventListener('click', onPopupCloseButtonClick);
   document.removeEventListener('click', onWindowCloseByClick);
@@ -85,7 +88,6 @@ form.addEventListener('submit', (evt) => {
   }
 
   if (!validatePhone(phoneValue)) {
-    console.log('unvalid phone');
     inputTel.classList.add('input-error');
     return false;
   } else {
@@ -96,6 +98,7 @@ form.addEventListener('submit', (evt) => {
     name: inputName.value,
     tel: inputTel.value,
   };
+  form.reset();
   console.log(formData);
   closePopup();
 });
