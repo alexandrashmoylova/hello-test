@@ -2,6 +2,13 @@
   min-width: 320px;
   padding: 20px 0;
 
+  @media (min-width: 1028px) {
+    padding: 264px 0 100px;
+    background-image: url('../../src/img/background.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
   &__hours {
     margin: 0 0 15px;
     font-size: 16px;
@@ -11,6 +18,12 @@
 
   &__wrapper {
     margin-top: 20px;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 
   &__btn {
@@ -19,5 +32,9 @@
 
   &__gallery {
     margin-top: 30px;
+
+    @media (min-width: 1028px) {
+      display: none;
+    }
   }
 }

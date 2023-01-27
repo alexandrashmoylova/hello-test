@@ -10,8 +10,14 @@
   background-color: #3a4574;
   color: #fff;
   cursor: pointer;
+  transition: background-color 0.5s ease;
 
   @media (min-width: 768px) {
     padding: 30px;
+  }
+
+  &:hover {
+    background-color: #d3b47f;
+    color: #000;
   }
 }

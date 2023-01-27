@@ -21,5 +21,10 @@
     border: 1px solid #000;
     border-radius: 50%;
     padding: 12px 13px;
+
+    &:hover {
+      border: 1px solid #d3b47f;
+      color: #d3b47f;
+    }
   }
 }

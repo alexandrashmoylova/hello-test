@@ -9,6 +9,10 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (min-width: 768px) {
+    display: none;
+    }
 }
 
 .burger > span,
@@ -20,6 +24,12 @@
   height: 2px;
   background-color: #000;
   transition: 0.2s;
+}
+
+.burger > span:hover,
+.burger > span:hover::before,
+.burger > span:hover::after{
+  background-color: #d3b47f;
 }
 
 .burger > span {

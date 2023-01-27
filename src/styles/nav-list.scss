@@ -5,16 +5,20 @@
   padding: 0;
   list-style: none;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
   &__item {
-    padding: 20px;
-    border-bottom: 2px solid #a1a1a1;
+    border-bottom: 2px solid #acacac;
+
+    @media (min-width: 768px) {
+      margin-right: 14px;
+      border-bottom: none;
+    }
   }
 
   &__link {
-    font-size: 18px;
-    line-height: calc(20 / 18);
-    text-decoration: none;
-    color: #000;
-    cursor: pointer;
+    display: block;
   }
 }
