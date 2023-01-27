@@ -1,4 +1,5 @@
 .reviews-list {
+  height: auto;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10,23 +11,36 @@
   }
 
   &__icon {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   &__title {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     font-size: 26px;
     font-weight: 600;
     line-height: 1;
     text-align: center;
     color: #d3b47f;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      line-height: calc(40 / 36);
+    }
   }
   
   &__text {
-    margin: 0 0 30px;
+    max-width: 720px;
+    margin: 0 0 40px;
+    padding: 0 55px;
     font-size: 14px;
     line-height: calc(22 / 14);
     text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: calc(40 / 16);
+      color: #fff;
+    }
   }
 
   &__name {

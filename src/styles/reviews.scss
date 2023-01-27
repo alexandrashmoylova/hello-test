@@ -1,4 +1,19 @@
 .reviews {
   min-width: 320px;
   padding: 20px 0;
+
+  @media (min-width: 500px) {
+    padding: 40px 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+    background-color: #3a4574;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 47%;
+  color: #d3b47f;
 }
