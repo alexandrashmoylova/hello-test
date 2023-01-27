@@ -12,7 +12,7 @@
 
   @media (min-width: 768px) {
     display: none;
-    }
+  }
 }
 
 .burger > span,
@@ -28,7 +28,7 @@
 
 .burger > span:hover,
 .burger > span:hover::before,
-.burger > span:hover::after{
+.burger > span:hover::after {
   background-color: #d3b47f;
 }
 

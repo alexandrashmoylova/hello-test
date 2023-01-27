@@ -1,19 +1,6 @@
-const swiper = new Swiper('.swiper', {
-  // Navigation arrows
-  direction: 'horizontal',
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  autoplay: {
-    delay: 3000,
-    
-  },
-});
-const header = document.querySelector(".header");
-const burger = document.querySelector(".burger");
-const nav = document.querySelector(".nav");
+const header = document.querySelector('.header');
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
 const modal = document.querySelector('.modal');
 const popup = document.querySelector('.modal__inner');
 const openPopupButton = document.querySelector('.intro__btn');
@@ -28,11 +15,11 @@ const checkCommentsLength = (value) => value.length <= MAX_STRING_LENGTH;
 
 const openmenuNav = (evt) => {
   evt.preventDefault();
-  header.classList.toggle("header--open");
-  nav.classList.toggle("nav--animate");
+  header.classList.toggle('header--open');
+  nav.classList.toggle('nav--animate');
 };
 
-burger.addEventListener("click", openmenuNav);
+burger.addEventListener('click', openmenuNav);
 
 const onPopupEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
@@ -83,9 +70,9 @@ function validatePhone(phone) {
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   let phoneValue = inputTel.value;
-  let emptyInputs = Array.from(inputs).filter(input => input.value === '');
+  let emptyInputs = Array.from(inputs).filter((input) => input.value === '');
 
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     if (input.value === '') {
       input.classList.add('input-error');
     } else {
@@ -108,7 +95,7 @@ form.addEventListener('submit', (evt) => {
   const formData = {
     name: inputName.value,
     tel: inputTel.value,
-  }
+  };
   console.log(formData);
   closePopup();
 });
