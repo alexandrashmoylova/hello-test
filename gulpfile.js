@@ -42,7 +42,7 @@ const paths = {
 
 // Очистить каталог dist, удалить все кроме изображений
 function clean() {
-  return del(['dist/*', '!dist/img'])
+  return del(['dist/*', '!dist/fonts', '!dist/img', '!dist/swiper'])
 }
 
 // Обработка html и pug
