@@ -70,10 +70,11 @@ function openPopup(evt) {
 
 openPopupButton.addEventListener('click', openPopup);
 
-function validatePhone(phone) {
-  let re = /^[0-9\s]*$/;
-  return re.test(String(phone));
-}
+
+inputTel.addEventListener('input', function (evt) {
+  const validValue = evt.target.value.replace(/[^0-9\s]/g, '');
+  this.value = validValue;
+});
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
@@ -91,13 +92,6 @@ form.addEventListener('submit', (evt) => {
 
   if (emptyInputs.length !== 0) {
     return false;
-  }
-
-  if (!validatePhone(phoneValue)) {
-    inputTel.classList.add('input-error');
-    return false;
-  } else {
-    inputTel.classList.remove('input-error');
   }
 
   let formData = {
