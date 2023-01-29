@@ -1,31 +1,17 @@
-const successMessage = document.querySelector('.message-success');
-const errorMessage = document.querySelector('.message-error');
-const form = document.getElementById('modal-form');
+const url = 'https://jsonplaceholder.typicode.com/posts';
 
 async function sendRequest(data) {
   const headers = {
-    'Content-Type': 'application/json'
-  }
-  let response = fetch('https://jsonplaceholder.typicode.com/posts', {
+    'Content-Type': 'application/json',
+  };
+  let response = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(data),
-    headers: headers
-});
+    headers: headers,
+  });
+  if (!response.ok) {
+    throw new Error(`Error at the adress ${url}, status code ${response}`);
+  }
 
-  await response
-      .then((res) => res.json())
-      .then((response) => {
-        if (response.error) {
-          errorMessage.style.display = 'block';
-          form.style.display = 'none';
-          form.reset();
-        } else {
-          successMessage.style.display = 'block';
-          form.style.display = 'none';
-          form.reset();
-        }
-      })
-      .catch((error) => {
-        alert('Error!');
-      });
+  return await response.json();
 }

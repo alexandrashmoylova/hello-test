@@ -1,5 +1,3 @@
-
-
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav');
@@ -11,6 +9,8 @@ const form = document.getElementById('modal-form');
 const inputs = document.querySelectorAll('.modal-form__input');
 const inputName = document.querySelector('.modal-form__input-name');
 const inputTel = document.querySelector('.modal-form__input-tel');
+const successMessage = document.querySelector('.message-success');
+const errorMessage = document.querySelector('.message-error');
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
 const checkCommentsLength = (value) => value.length <= MAX_STRING_LENGTH;
@@ -53,6 +53,9 @@ function closePopup() {
   document.removeEventListener('keydown', onPopupEscKeydown);
   document.removeEventListener('click', onPopupCloseButtonClick);
   document.removeEventListener('click', onWindowCloseByClick);
+  successMessage.style.display = 'none';
+  errorMessage.style.display = 'none';
+  form.removeAttribute('style');
   form.reset();
 }
 
@@ -99,8 +102,20 @@ form.addEventListener('submit', (evt) => {
 
   let formData = {
     name: nameValue,
-    tel: phoneValue,
+    tel: phoneValue
   };
 
-  sendRequest(formData);
+  sendRequest(formData)
+  .then((data) => {
+    console.log(data);
+    successMessage.style.display = 'block';
+    form.style.display = 'none';
+    form.reset();
+  })
+  .catch((error) => {
+    console.error(error);
+    errorMessage.style.display = 'block';
+    form.style.display = 'none';
+    form.reset();
+  });
 });
