@@ -110,12 +110,10 @@ form.addEventListener('submit', (evt) => {
     console.log(data);
     successMessage.style.display = 'block';
     form.style.display = 'none';
-    form.reset();
   })
   .catch((error) => {
     console.error(error);
     errorMessage.style.display = 'block';
     form.style.display = 'none';
-    form.reset();
   });
 });
