@@ -1,3 +1,5 @@
+
+
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav');
@@ -73,6 +75,7 @@ function validatePhone(phone) {
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   let phoneValue = inputTel.value;
+  let nameValue = inputName.value;
   let emptyInputs = Array.from(inputs).filter((input) => input.value === '');
 
   inputs.forEach((input) => {
@@ -94,11 +97,12 @@ form.addEventListener('submit', (evt) => {
     inputTel.classList.remove('input-error');
   }
 
-  const formData = {
-    name: inputName.value,
-    tel: inputTel.value,
+  let formData = {
+    name: nameValue,
+    tel: phoneValue,
   };
-  form.reset();
-  console.log(formData);
+
+  sendRequest(formData);
+
   closePopup();
 });
