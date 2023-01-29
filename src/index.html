@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -109,12 +110,22 @@
               </ul>
             </div>
             <div class="intro__gallery gallery-block">
-              <img
-                src="/img/rest-photo-mobile.png"
-                width="300px"
-                height="200px"
-                alt="Restaraunt photo"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    /img/rest-photo-mobile.webp,
+                    /img/rest-photo-mobile@2x.webp 2x
+                  "
+                />
+                <img
+                  src="/img/rest-photo-mobile.png"
+                  srcset="/img/rest-photo-mobile@2x.png 2x"
+                  width="300"
+                  height="200"
+                  alt="Restaraunt photo"
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -236,20 +247,34 @@
               </ul>
               <div class="photo-block">
                 <div class="photo-block__img">
-                  <img
-                    src="/img/rest-1.png"
-                    width="323"
-                    height="486"
-                    alt="Restaraunt Interior"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/img/rest-1.webp, /img/rest-1@2x.webp 2x"
+                    />
+                    <img
+                      src="/img/rest-1.png"
+                      srcset="/img/rest-1@2x.png 2x"
+                      width="323"
+                      height="486"
+                      alt="Restaraunt Interior"
+                    />
+                  </picture>
                 </div>
                 <div class="photo-block__img">
-                  <img
-                    src="/img/rest-2.png"
-                    width="323"
-                    height="486"
-                    alt="Restaraunt Interior"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/img/rest-2.webp, /img/rest-2@2x.webp 2x"
+                    />
+                    <img
+                      src="/img/rest-2.png"
+                      srcset="/img/rest-2@2x.png 2x"
+                      width="323"
+                      height="486"
+                      alt="Restaraunt Interior"
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -360,11 +385,7 @@
                 <span>Close</span>
               </a>
             </div>
-            <form
-            action="#"
-              class="modal-form"
-              id="modal-form"
-            >
+            <form action="#" class="modal-form" id="modal-form">
               <div class="modal-form__group">
                 <label class="modal-form__label" for="contact-name"></label>
                 <input
@@ -388,8 +409,10 @@
               </div>
               <button class="modal-form__btn btn" type="submit">Reserve</button>
             </form>
-            <div class="modal-form__success message-success">Thank You! We will call you back soon.</div>
-              <div class="modal-form__error message-error">Oops. Something went wrong:(</div>
+            <div class="message-success">
+              Thank You! We will call you back soon.
+            </div>
+            <div class="message-error">Oops. Something went wrong:(</div>
           </div>
         </section>
       </main>
