@@ -103,6 +103,4 @@ form.addEventListener('submit', (evt) => {
   };
 
   sendRequest(formData);
-
-  closePopup();
 });

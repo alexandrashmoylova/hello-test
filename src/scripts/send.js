@@ -1,3 +1,7 @@
+const successMessage = document.querySelector('.message-success');
+const errorMessage = document.querySelector('.message-error');
+const form = document.getElementById('modal-form');
+
 async function sendRequest(data) {
   const headers = {
     'Content-Type': 'application/json'
@@ -12,10 +16,12 @@ async function sendRequest(data) {
       .then((res) => res.json())
       .then((response) => {
         if (response.error) {
-          alert('bad');
+          errorMessage.style.display = 'block';
+          form.style.display = 'none';
           form.reset();
         } else {
-          alert('good');
+          successMessage.style.display = 'block';
+          form.style.display = 'none';
           form.reset();
         }
       })
