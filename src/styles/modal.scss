@@ -42,10 +42,6 @@
       position: relative;
       font-size: 0;
 
-      &:hover {
-        background-color: #d3b47f;
-      }
-
       &::before,
       &::after {
         content: "";
@@ -67,6 +63,12 @@
       }
     }
   }
+}
+
+.modal__close > span:hover,
+.modal__close > span:hover::before,
+.modal__close > span:hover::after {
+  background-color: #d3b47f;
 }
 
 .modal--active {
